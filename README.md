@@ -137,10 +137,10 @@ Intégration d'algorithmes de Machine Learning pour prédire les tendances de s�
 Ajout d'une page dédiée pour consulter rapidement les scans passés et réduire la charge de traitement.
 
 - **🛡 Sécurité avancée :**
-Intégration d’un système de gestion des utilisateurs basé sur Oracle ou PostgreSQL pour une meilleure sécurité des authentifications.
+Intégration d’un système de gestion des utilisateurs basé sur **Oracle** ou **PostgreSQL** pour une meilleure sécurité des authentifications.
 
 - **☁ Déploiement sur le cloud :**
-Hébergement sur AWS, Google Cloud ou Heroku pour une accessibilité mondiale et une meilleure gestion des ressources.
+Hébergement sur **AWS**, **Google Cloud** ou **Heroku** pour une accessibilité mondiale et une meilleure gestion des ressources.
 
 ## Compatibilité Navigateur
 
