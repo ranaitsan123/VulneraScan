@@ -1,10 +1,10 @@
-# [VulneraScan]( )
+# [VulneraScan - Outil d'Analyse des Vulnérabilités pour Applications Web]( )
 
 ![version](https://img.shields.io/badge/version-2.1.0-blue.svg)
 
 ![Image Preview](https://github.com/user-attachments/assets/41a9272f-e0bb-4b91-9e7d-b52c60dac72d)
 
-MedicaReport is a web app designed for doctors to access patient medical reports generated from ambulance datasets. The reports are made available to the doctors before the ambulance arrives at the hospital, so they can prepare for patient care in advance. The app also provides authentication and a dashboard for doctors to review, download, and analyze medical data.
+VulneraScan est un outil automatisé permettant d’identifier et d’évaluer les vulnérabilités des applications web. Il intègre **OWASP ZAP** pour scanner les applications à la recherche de failles de sécurité courantes telles que **les injections SQL**, **les failles XSS** et **CSRF**. L'objectif est d'offrir une solution simple, efficace et accessible aux développeurs et entreprises pour sécuriser leurs applications.
 
 This tutorial will guide you through the process of installing and running MedicaReport on your local machine.
 
@@ -15,7 +15,7 @@ This tutorial will guide you through the process of installing and running Medic
 - [Quick Start](#quick-start)
 - [Running the Application](#Running-the-Application)
 - [File Structure](#file-structure)
-- [Features Overview](#Features-Overview)
+- [Fonctionnalités](#Fonctionnalités)
 - [Browser Support](#browser-support)
 - [Customization](#Customization)
 - [Contributing](#Contributing)
@@ -158,31 +158,25 @@ MedicaReport
   └── app.py
 ```
 
-## Features Overview
+## Fonctionnalités
 
-**1. User Authentication**
+**1. Scan des vulnérabilités 🔍**
 
-The app provides a simple login system using a JSON-based database for storing doctor credentials. Doctors can log in to access the dashboard and medical reports.
+Détection des failles courantes sur les applications web.
 
-**2. Dashboard & Reports pages**
+**2. Rapports détaillés 📊**
 
-Once authenticated, doctors are redirected to the dashboard, where they can choose Reports page and see:
+Génération de rapports en **JSON/PDF**, avec des graphes illustrant les niveaux de risque.
 
-- View a list of patients.
-- Access individual patient reports.
-- Download patient medical reports.
+**3. Historique des scans 📜**
 
-**3. Report Generation**
+Consultation et téléchargement des rapports précédents.
 
-The app generates medical reports using vital signs data such as heart rate, respiratory rate, and body temperature. It also uses Groq's API for generating diagnoses and recommendations based on the data provided.
+**4. Interface Web intuitive 🌐**
 
-**4. Reports Page**
+Exécution des scans directement depuis un navigateur.
 
-On the reports page, doctors can:
 
-- Select a patient.
-- View the patient’s medical report.
-- Download the report in a structured format.
 
 ## Customization
 
