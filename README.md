@@ -10,13 +10,13 @@ This tutorial will guide you through the process of installing and running Medic
 
 ## Table of Contents
 
-- [Demo](#demo)
-- [Prerequisites](#Prerequisites)
-- [Quick Start](#quick-start)
-- [Running the Application](#Running-the-Application)
+- [Aperçus](#Aperçus)
+- [Pré-requis](#Pré-requis)
+- [Installation](#Installation)
 - [File Structure](#file-structure)
 - [Fonctionnalités](#Fonctionnalités)
 - [Browser Support](#browser-support)
+- [Technologies utilisées](#Technologies-utilisées)
 - [Customization](#Customization)
 - [Contributing](#Contributing)
 - [Resources](#resources)
@@ -35,95 +35,40 @@ This tutorial will guide you through the process of installing and running Medic
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Reports page](https://github.com/user-attachments/assets/e1b710b4-ba85-4893-8e58-6bbb794a3e6b) | [![About page](https://github.com/user-attachments/assets/37ac89ec-d474-46f6-9cfe-6dab80e4450f)](https://github.com/user-attachments/assets/3a8ff9c0-170a-45c8-8bc1-c4786564dc22) | [![Home page](https://github.com/user-attachments/assets/f132341a-bd92-4c1d-ae93-27ea977d823f)](https://medica-report.framer.website/)|
 
-## Prerequisites
+## Pré-requis
 
-Before you start, ensure that you have the following installed on your machine:
+- PHP 7+ et MySQL
+- Java 8+ (si utilisation de l'intégration Java)
+- OWASP ZAP installé ([Téléchargement](https://www.zaproxy.org/download/))
+- XAMPP (serveur Apache + MySQL)
+- Ngrok pour l'accès distant
 
-- Python 3.7+ (For running the app backend)
-- pip (Python package installer)
-- Git (To clone the repository)
-- A Groq API key (For processing medical data and generating reports)
-- A web browser (For accessing the web interface)
+## Installation
 
-You will also need a local environment setup (virtual environment recommended) for running the Python-based web application.
-
-## Download and Installation
-
-**Step 1: Clone the Repository**
-
-Start by cloning the MedicaReport repository to your local machine:
+**Etape 1: Cloner le projet**
 
 ```bash
-git clone https://github.com/MarwaneMLE/generate-medical-report.git
-cd generate-medical-report
+git clone https://github.com/ranaitsan123/VulneraScan.git
+cd VulneraScan
 ```
 
-**Step 2: Create a Virtual Environment**
+**Etape 2: Configuration de la base de données**
 
-To keep your dependencies isolated, it's recommended to create a virtual environment.
+- Importer ```scanner.sql``` dans MySQL
+- Modifier ```db_conn.php``` pour ajouter les accès à votre base de données
 
-- For Windows:
+**Etape 3: Lancer l’application**
 
-```bash
-python -m venv venv
-.\venv\Scripts\activate
-```
+- Démarrer XAMPP (Apache & MySQL)
+- Accéder au projet : ```http://localhost/VulneraScan```
 
-- For macOS/Linux:
+**Etape 4: Exécuter un scan**
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-**Step 3: Install Dependencies**
-
-Install the necessary Python dependencies using ```pip```:
-
-```bash
-pip install -r requirements.txt
-```
-
-**Step 4: Set Up Environment Variables**
-
-Create a ```.env``` file in the root of the project directory and add the following environment variables:
-
-```bash
-GROQ_API_KEY=your_groq_api_key
-```
-
-Replace ```your_groq_api_key``` with the API key you get from [Groq API](https://console.groq.com/keys) and ```your_secret_key_for_flask_app``` with a random string used to secure your Flask application.
+- Ouvrir ```ZAP``` et activer l’API
+- Se connecter à l'interface et entrer l’URL cible
+- Lancer l’analyse et télécharger le rapport
 
 **Step 5: Set Up the Database (JSON Database)**
-
-The project uses a JSON file as the database for authentication. Make sure to place the user data in users.json inside the project directory.
-
-Example ```users.json``` structure:
-
-```json
-[
-  {
-    "username": "doctor1",
-    "password": "password123",
-    "email": "email@email.com"
-  }
-]
-```
-## Running the Application
-
-**Step 1: Start the Flask Server**
-
-Run the following command to start the Flask server:
-
-```bash
-python app.py
-```
-
-By default, the app will be accessible at http://localhost:5000.
-
-**Step 2: Access the Web Interface**
-
-Open a web browser and visit http://localhost:5000. You will be presented with a login page.
 
 ## File Structure
 
@@ -160,62 +105,84 @@ MedicaReport
 
 ## Fonctionnalités
 
-**1. Scan des vulnérabilités 🔍**
-
+**1. Scan des vulnérabilités 🔍:**
 Détection des failles courantes sur les applications web.
 
-**2. Rapports détaillés 📊**
-
+**2. Rapports détaillés 📊:**
 Génération de rapports en **JSON/PDF**, avec des graphes illustrant les niveaux de risque.
 
-**3. Historique des scans 📜**
-
+**3. Historique des scans 📜:**
 Consultation et téléchargement des rapports précédents.
 
-**4. Interface Web intuitive 🌐**
-
+**4. Interface Web intuitive 🌐:**
 Exécution des scans directement depuis un navigateur.
 
+**5. Accès distant sécurisé 📡:**
+Déploiement facilité grâce à **ngrok**.
 
+**6. Support multi-langages 🔧:**
+Intégration en **Java** et **PHP**.
 
-## Customization
+## Personnalisation
 
-VulneraScan is highly customizable, and you can enhance its functionality with the following features:
+VulneraScan est hautement personnalisable et peut être enrichi avec les fonctionnalités suivantes :
 
-<!--- **JWT Authentication:** Implement JSON Web Tokens (JWT) for stateless authentication, improving security and scalability by eliminating the need for server-side session storage.
+- **🔑 Authentification JWT :**
+Mise en place de JSON Web Tokens (JWT) pour une authentification sans état, améliorant la sécurité et l'évolutivité.
 
-- **Enhanced PDF Generation with ML:** Use machine learning algorithms like regression to predict patient health trends and generate more insightful, data-driven reports.
+- **📊 Amélioration des rapports PDF avec l'IA :**
+Intégration d'algorithmes de Machine Learning pour prédire les tendances de sécurité et générer des rapports plus intelligents.
 
-- **Report History Page:** Add a History Page to store and quickly access previously generated reports, reducing processing time and resource consumption.
+- **🕒 Page d’historique des scans :**
+Ajout d'une page dédiée pour consulter rapidement les scans passés et réduire la charge de traitement.
 
-- **DBMS for Authentication:** Switch to a Database Management System (DBMS) like Oracle or PostgreSQL for more secure and scalable user authentication, or integrate OAuth for third-party logins.
+- **🛡 Sécurité avancée :**
+Intégration d’un système de gestion des utilisateurs basé sur Oracle ou PostgreSQL pour une meilleure sécurité des authentifications.
 
-- **Cloud Deployment:** Deploy the app on cloud platforms like AWS, Google Cloud, or Heroku for global access, scalability, and better resource management.
+- **☁ Déploiement sur le cloud :**
+Hébergement sur AWS, Google Cloud ou Heroku pour une accessibilité mondiale et une meilleure gestion des ressources.
 
-These customizations can improve performance, security, and user experience. -->
+## Compatibilité Navigateur
 
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
+VulneraScan est compatible avec les deux dernières versions des navigateurs suivants :
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
-## Technologies Used
+## Technologies utilisées
 
-VulneraScan is built using a variety of programming languages and libraries. Here's a quick overview of the main technologies used in the project, along with their official documentation:
+- **Back-end :** PHP, Java, MySQL
 
+- **Front-end :** HTML, CSS, Bootstrap, JavaScript, jQuery, Chart.js
+  
+- **Base de données :** MySQL
+  
+- **Sécurité & Scan :** OWASP ZAP API
+  
+- **Déploiement & Tunneling :** Ngrok
+  
+- **Serveur web :** Apache (XAMPP)
+  
+- **Rapports :** jsPDF, JSON
 
-## Contributing
+## Contribuer 🤝
 
-We welcome contributions to improve MedicaReport. If you'd like to contribute, please follow these steps:
+Nous accueillons toutes les contributions pour améliorer VulneraScan. Si vous souhaitez contribuer, suivez ces étapes :
 
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
-4. Commit your changes.
-5. pen a pull request.
+1. **Forkez** le dépôt.
+2. **Créez une nouvelle branche** pour vos modifications.
+3. **Effectuez vos changements.**
+4. **Committez vos modifications** avec un message clair.
+5. **Soumettez une Pull Request.**
+   
+Assurez-vous que votre code respecte le style existant et inclut des tests si nécessaire.
 
-Please ensure that your code follows the existing style and includes tests if applicable.
+## Contributeurs
+
+- **Rana Shafi**
+- **Salma Sohbi**
+- **Aicha Lahnite**
+  
+👩‍💻 **Encadré par :** Pr. Laila Fetjah
 
 ## Resources
 
@@ -225,21 +192,19 @@ Please ensure that your code follows the existing style and includes tests if ap
 - Support: <https://www.linkedin.com/in/aicha-lahnite/>
 - Issues: [Github Issues Page](https://github.com/ranaitsan123/VulneraScan/issues)
 
-## Help Us Fix Bugs!
+## Aidez-nous à corriger les bugs !
 
-We’re actively working on improving MedicaReport, and we need your help! If you encounter any bugs or issues, we encourage you to contribute by fixing them. Here’s how you can get involved:
+Nous travaillons activement à l'amélioration de VulneraScan et nous avons besoin de votre aide ! Si vous trouvez des bugs ou rencontrez des problèmes, voici comment vous pouvez contribuer :
 
-1. **Report the Bug:** If you find a bug, please report it in the [Issues](https://github.com/ranaitsan123/VulneraScan/issues) section with clear steps to reproduce the problem.
+- **Signalez le bug :** Ouvrez un ticket dans la section Issues en décrivant clairement le problème et les étapes pour le reproduire.
+- **Corrigez le bug :** Si vous êtes familier avec le code, vous pouvez directement corriger le problème en forkant le projet, en créant une branche et en soumettant une pull request.
+- **Améliorez l’outil :** Même si vous ne trouvez pas de bug, toute amélioration, optimisation ou nouvelle fonctionnalité est la bienvenue !
+  
+Vos contributions aident à rendre VulneraScan meilleur pour tout le monde — merci de faire partie de cette aventure !
 
-2. **Fix the Bug:** If you're familiar with the code, feel free to fix the issue. Fork the repository, create a branch, and submit a pull request with your changes.
+## License
 
-3. **Contribute Improvements:** Even if you don't find a bug, any improvements, optimizations, or enhancements are always welcome!
-
-Your contributions help make MedicaReport better for everyone — thank you for being part of the journey!
-
-## Licensing
-
-- Copyright &copy; 2025 [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) & 
+Ce projet est sous licence MIT. Voir [LICENSE]() pour plus de détails.
 
 ## Social Media
 
@@ -249,4 +214,4 @@ Email: halaicha300@gmail.com |
 
 Discord: aicha_a1000 <halaicha300@gmail.com>
 
-Github: [Aicha Lahnite](https://github.com/ranaitsan123) | 
+Github: [Aicha Lahnite](https://github.com/ranaitsan123) | [Rana Shafi]()
