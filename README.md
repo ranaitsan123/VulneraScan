@@ -68,8 +68,6 @@ cd VulneraScan
 - Se connecter à l'interface et entrer l’URL cible
 - Lancer l’analyse et télécharger le rapport
 
-**Step 5: Set Up the Database (JSON Database)**
-
 ## File Structure
 
 Within the download you'll find the following directories and files:
