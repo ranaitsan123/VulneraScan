@@ -33,7 +33,7 @@ This tutorial will guide you through the process of installing and running Medic
 
 | Reports page                                                                                                                                                                         | About page                                                                                                                                                                                | Home page                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Reports page](https://github.com/user-attachments/assets/e1b710b4-ba85-4893-8e58-6bbb794a3e6b) | [![About page](https://github.com/user-attachments/assets/37ac89ec-d474-46f6-9cfe-6dab80e4450f)](https://github.com/user-attachments/assets/3a8ff9c0-170a-45c8-8bc1-c4786564dc22) | [![Home page](https://github.com/user-attachments/assets/f132341a-bd92-4c1d-ae93-27ea977d823f)](https://medica-report.framer.website/)|
+| ![Reports page](https://github.com/user-attachments/assets/e1b710b4-ba85-4893-8e58-6bbb794a3e6b) | [![About page](https://github.com/user-attachments/assets/37ac89ec-d474-46f6-9cfe-6dab80e4450f)](https://github.com/user-attachments/assets/3a8ff9c0-170a-45c8-8bc1-c4786564dc22) | ![Page Acceuil](https://github.com/user-attachments/assets/15100249-af6c-48c5-8f42-38142c2aec62)|
 
 ## Pré-requis
 
@@ -183,7 +183,7 @@ Assurez-vous que votre code respecte le style existant et inclut des tests si n�
 
 - **[Rana Shafi](https://github.com/RanaShafi04)**
 - **Salma Sohbi**
-- **Aicha Lahnite**
+- **[Aicha Lahnite](https://github.com/ranaitsan123)**
   
 👩‍💻 **Encadré par :** Pr. Laila Fetjah
 
