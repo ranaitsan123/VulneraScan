@@ -1,8 +1,8 @@
-# [VulneraScan - Outil d'Analyse des Vulnérabilités pour Applications Web]( )
+# [VulneraScan - Outil d'Analyse des Vulnérabilités pour Applications Web](https://just-cues-876870.framer.app/)
 
 ![version](https://img.shields.io/badge/version-2.1.0-blue.svg)
 
-![Image Preview](https://github.com/user-attachments/assets/41a9272f-e0bb-4b91-9e7d-b52c60dac72d)
+![Image Preview](https://github.com/user-attachments/assets/8768f8d5-ed2c-44e3-9a82-9eb01d684079)
 
 VulneraScan est un outil automatisé permettant d’identifier et d’évaluer les vulnérabilités des applications web. Il intègre **OWASP ZAP** pour scanner les applications à la recherche de failles de sécurité courantes telles que **les injections SQL**, **les failles XSS** et **CSRF**. L'objectif est d'offrir une solution simple, efficace et accessible aux développeurs et entreprises pour sécuriser leurs applications.
 
@@ -10,20 +10,20 @@ This tutorial will guide you through the process of installing and running Medic
 
 ## Table of Contents
 
-- [Aperçus](#Aperçus)
-- [Pré-requis](#Pré-requis)
-- [Installation](#Installation)
-- [File Structure](#file-structure)
-- [Fonctionnalités](#Fonctionnalités)
-- [Browser Support](#browser-support)
-- [Technologies utilisées](#Technologies-utilisées)
-- [Customization](#Customization)
-- [Contributing](#Contributing)
+- [Aperçus](#apercus)
+- [Pré-requis](#pré-requis)
+- [Installation](#installation)
+- [File Structure](#structure-du-fichier)
+- [Fonctionnalités](#fonctionnalites)
+- [Browser Support](#compatibilite-navigateur)
+- [Technologies utilisées](#technologies-utilisees)
+- [Customization](#personnalisation)
+- [Contributing](#contribuer)
 - [Resources](#resources)
-- [Help Us Fix Bugs!](#Help-Us-Fix-Bugs!)
+- [Help Us Fix Bugs!](#aidez-nous-a-corriger-les-bugs)
 - [Technical Support or Questions](#technical-support-or-questions)
-- [Useful Links](#Resources)
-- [Licensing](#licensing)
+- [Useful Links](#resources)
+- [Licensing](#license)
 
 ## Demo
 
@@ -68,12 +68,12 @@ cd VulneraScan
 - Se connecter à l'interface et entrer l’URL cible
 - Lancer l’analyse et télécharger le rapport
 
-## File Structure
+## Structure du fichier
 
-Within the download you'll find the following directories and files:
+Dans le téléchargement, vous trouverez les répertoires et fichiers suivants :
 
 ```
-MedicaReport
+VulneraScan
   ├── assets
   │   ├── css
   │   ├── fonts
@@ -87,18 +87,23 @@ MedicaReport
   │   └── scss
   │       ├── argon-dashboard
   │       └── argon-dashboard.scss
-  ├── templates
-  │   ├── dashboard.html
-  │   ├── login.html
-  │   ├── signup.html
-  │   ├── reports.html
-  │   └── about.html
-  ├── api.py
-  ├── report_generator.py
-  ├── auth.py
-  ├── pdf_generator.py
-  ├── human_vital_signs_dataset_2024.csv(data.zip extract)
-  └── app.py
+  ├── pages
+  │   ├── contact_us.php
+  │   ├── dashboard1.php
+  │   ├── db_conn.php
+  │   ├── historique.php
+  │   ├── index.php
+  │   ├── login.php
+  │   ├── logout.php
+  │   ├── scan.php
+  │   ├── signup-check.php
+  │   ├── signup.php
+  │   ├── telechargement_pdf.php
+  │   ├── view_result.php
+  │   ├── zap_integActive.php
+  │   ├── zap_integSpider.php
+  │   └── style.css
+  └── scanner.sql
 ```
 
 ## Fonctionnalités
@@ -176,7 +181,7 @@ Assurez-vous que votre code respecte le style existant et inclut des tests si n�
 
 ## Contributeurs
 
-- **Rana Shafi**
+- **[Rana Shafi](https://github.com/RanaShafi04)**
 - **Salma Sohbi**
 - **Aicha Lahnite**
   
@@ -186,7 +191,7 @@ Assurez-vous que votre code respecte le style existant et inclut des tests si n�
 
 - Demo Video: < >
 - Documentation Boostrap Tempaltes: <https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard>
-- VulneraScan Home Page: <>
+- VulneraScan Home Page: <https://just-cues-876870.framer.app/>
 - Support: <https://www.linkedin.com/in/aicha-lahnite/>
 - Issues: [Github Issues Page](https://github.com/ranaitsan123/VulneraScan/issues)
 
@@ -206,10 +211,10 @@ Ce projet est sous licence MIT. Voir [LICENSE]() pour plus de détails.
 
 ## Social Media
 
-Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | 
+Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | [Rana Shafi](https://www.linkedin.com/in/rana-shafi-74149b2bb/)
 
 Email: halaicha300@gmail.com | 
 
 Discord: aicha_a1000 <halaicha300@gmail.com>
 
-Github: [Aicha Lahnite](https://github.com/ranaitsan123) | [Rana Shafi]()
+Github: [Aicha Lahnite](https://github.com/ranaitsan123) | [Rana Shafi](https://github.com/RanaShafi04)
