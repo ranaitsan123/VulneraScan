@@ -213,7 +213,7 @@ Ce projet est sous licence MIT. Voir [LICENSE]() pour plus de détails.
 
 Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | [Rana Shafi](https://www.linkedin.com/in/rana-shafi-74149b2bb/) | [Salma Sohbi](https://www.linkedin.com/in/salma-sohbi-12b791288/)
 
-Email: [Aicha Lahnite](halaicha300@gmail.com) | [Salma Sohbi](sohbisalma@gmail.com) |
+Email: Aicha Lahnite <halaicha300@gmail.com> | Salma Sohbi <sohbisalma@gmail.com> |
 
 Discord: aicha_a1000 <halaicha300@gmail.com>
 
