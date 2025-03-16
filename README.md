@@ -182,7 +182,7 @@ Assurez-vous que votre code respecte le style existant et inclut des tests si n�
 ## Contributeurs
 
 - **[Rana Shafi](https://github.com/RanaShafi04)**
-- **Salma Sohbi**
+- **[Salma Sohbi](https://github.com/salma-77)**
 - **[Aicha Lahnite](https://github.com/ranaitsan123)**
   
 👩‍💻 **Encadré par :** Pr. Laila Fetjah
@@ -217,4 +217,4 @@ Email: halaicha300@gmail.com |
 
 Discord: aicha_a1000 <halaicha300@gmail.com>
 
-Github: [Aicha Lahnite](https://github.com/ranaitsan123) | [Rana Shafi](https://github.com/RanaShafi04)
+Github: [Aicha Lahnite](https://github.com/ranaitsan123) | [Rana Shafi](https://github.com/RanaShafi04) | [Salma Sohbi](https://github.com/salma-77)
